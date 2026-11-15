@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 웹브라우저 도메인 -->
+    <title>My TODO List</title>
+
+    <!--외부 스타일시트 적용 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--자바스크립트 파일 읽어오기 -->
+    <script src="js/todo.js"></script>
+    <!--Tailwind CSS 연결 -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+</head>
+
+<!-- - min-h-screen : 페이지 높이를 화면만큼 확보 -->
+<body class="">
+    <!-- mx-auto : main을 가로 가운데에 배치 -->
+    <!-- max-w-2xl : 내용이 너무 넓어지지 않도록 최대 너비 지정  -->
+    <main class="">
+    
+        <!-- 1. title -->
+        <div class="">
+            <h1 id="title" class="">
+                MY TODO LIST
+            </h1>
+            <h3 id="content" class="">
+                ٩(๑>∀<๑)۶ 오늘의 할일은 내일의 나의 것이 아니다 ٩(๑>∀<๑)۶
+            </h3>
+        </div>
+
+        <!-- 재미요소 이미지 넣기 -->
+        <img src="todolist.jpg" alt="오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은오늘의 할일은..?" width="200">
+
+        <!-- 2. 입력창과 추가버튼 -->
+        <div>
+            <form id="todo-form">
+                <h4>(New)새로운 할일 등록하기</h4>
+
+                <!-- 2-1. 우선순위 선택 -->
+                <!-- label로 감싸서 글자를 클릭해도 체크될 수 있게 -->
+                <label>우선순위</label>
+                <label>
+                    <input type="radio" id="rank1" name="rank" value="낮음">낮음
+                </label>
+                <label>
+                    <input type="radio" id="rank2" name="rank" value="보통">보통
+                </label>
+                <label>
+                    <input type="radio" id="rank3" name="rank" value="중요">중요
+                </label>
+                <label>
+                    <input type="radio" id="rank4" name="rank" value="매우중요">매우중요
+                </label>
+                
+                <!-- 줄갱 말고 다른거 없을까..? -->
+                <br>
+
+                <!-- 2-2. Todo List를 입력창 -->
+                <label for="todo-input">무엇을?</label>
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="오늘 할일을 입력하세요 ✍️"
+                    required
+                    class=""
+                >
+                                
+                <!-- 2-3. 날짜 선택 -->
+                <label for="date-input">언제까지?</label>
+                <input 
+                    type="datetime-local"
+                    id="date-input"
+                >
+
+                <!-- 2-4. 입력 컨텐츠 서버에 제출버튼 -->
+                <button id="add-btn", type="submit">
+                    추가➕
+                </button>
+
+            </form>
+        </div>
+
+        <!-- 3. 추가된 todo 목록이 보일 공간 -->
+        <div class="todo-list" id="todo-list">
+            <!-- 3-1. js각 add 버튼이 눌리면 넣을 공간 -->
+            <h4>등록된 할일 목록 ✍️</h4>
+            <ul
+                id="in-todo-list"
+                class=""
+            >
+            </ul>
+
+            <!-- 3-2. 등록된 Todo가 없을때 보여질 화면 -->
+            <p
+                id="notin-todo-list"
+            >
+            아직 등록된 Todo List가 없습니다.
+            </p>
+        </div>
+        
+
+    </main>
+</body>
+</html>
