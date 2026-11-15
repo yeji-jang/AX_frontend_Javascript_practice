@@ -55,8 +55,7 @@ git clone https://github.com/yeji-jang/AX_frontend_Javascript_practice.git
  ┣ 📂 css
  ┃ ┗ 📜 style.css      기본 스타일 (여백 초기화, 글꼴)
  ┣ 📂 js
- ┃ ┣ 📜 todo.js        ⭐ 현재 사용 중인 투두리스트 기능
- ┃ ┗ 📜 todolist.js    처음 만든 버전 (할 일 추가만 가능)
+ ┃ ┗ 📜 todo.js        ⭐ 투두리스트 기능 (추가 · 완료 · 수정 · 삭제 · 저장)
  ┣ 📄 index.html       화면 구조 (입력 폼, 할 일 목록)
  ┗ 🖼️ todolist.jpg     화면에 넣은 이미지
 ```
